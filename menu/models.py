@@ -9,7 +9,7 @@ class Category(models.Model):
         blank=True,
         null=True,
         verbose_name="Родитель",
-        related_name="subcategories",
+        related_name="subcategory",
     )
 
     def __str__(self: 'object of class Category') -> str:

@@ -4,6 +4,6 @@ from django.urls import path
 app_name = 'menu'
 
 urlpatterns = [
-    path("/", 'create_ads', name="menu_list"),
+    # path("/", 'create_ads', name="menu_list"),
 
 ]

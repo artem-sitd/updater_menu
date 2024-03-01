@@ -1,0 +1,14 @@
+<ul>
+    {% for category in categories %}
+    <li>
+        <a href="#">{{ category.title }}</a>
+        {% if category.has_children %}
+        <ul>
+            {% for subcategory in category.subcategory %}
+            <li><a href="#">{{ subcategory.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
