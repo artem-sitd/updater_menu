@@ -4,7 +4,7 @@
         <a href="#">{{ category.title }}</a>
         {% if category.has_children %}
         <ul>
-            {% for subcategory in category.subcategory %}
+            {% for subcategory in category.subcategory.all %}
             <li><a href="#">{{ subcategory.title }}</a></li>
             {% endfor %}
         </ul>

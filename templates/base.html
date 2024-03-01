@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+{% load menu_tags %}
+
+
+<head style="padding-top: 10%">
     <meta charset="UTF-8">
     <title>
         {% block title %}
@@ -8,13 +11,18 @@
         {% endblock %}
     </title>
 </head>
-<body>
-{% block body %}
-
-<nav>
-
-</nav>
-
-{% endblock %}
+<body style="max-width: 1200px; margin: 0 auto; padding-top: 5%">
+<div style="overflow: hidden;">
+        <div style="float: left; width: 200px;">
+            <!-- Код или элемент, который должен быть слева -->
+            {% draw_menu %}
+        </div>
+        <div style="margin-left: 210px;">
+            <!-- Остальной контент, который должен быть справа -->
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
 </body>
 </html>
+

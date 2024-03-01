@@ -4,6 +4,12 @@
 {% endblock %}
 {% block body %}
     <h1>Консалтинг</h1>
-    <h4>{% lorem 7 %}</h4>
+    {% for services in services_consulting %}
+        <ul>
+            <li><h3>{{ services.title }}</h3></li>
+            {{ services.description }}
+        </ul>
+    {% endfor %}
+
 {% endblock %}
 
