@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load menu_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Base Title
+        {% endblock %}
+    </title>
+</head>
 <body>
-{block body}
+{% block body %}
 
 <nav>
-    {% draw_menu 'main_menu' %}
+
 </nav>
 
-{endblock}
+{% endblock %}
 </body>
 </html>

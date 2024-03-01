@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-{block body}
-<h1>Страница контактов</h1>
-<h3>lorem</h3>
-{endblock}
+{% block title %}
+    Контакты
+{% endblock %}
+{% block body %}
+    <h1>Контакты</h1>
+    <h4>{% lorem 7 %}</h4>
+{% endblock %}
+
