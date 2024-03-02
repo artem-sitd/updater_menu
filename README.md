@@ -1,5 +1,6 @@
 ## Демонстрация работы:
-Ссылка на видео
+
+https://github.com/artem-sitd/updater_menu/assets/22573129/ff3b79a9-2d9b-4f5e-be1f-086cc24623ab
 
 ### Быстрый старт
 
