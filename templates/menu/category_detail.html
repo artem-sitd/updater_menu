@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ category.title }}
+{% endblock %}
+{% block body %}
+    <h1>{{ category.title }}</h1>
+    {% if category.parent %}
+        <h3>Родитель:{{ category.parent }}</h3>
+    {% endif %}
+
+
+    {% if category.services.all %}
+        <h2>Связанные услуги:</h2>
+        <ul>
+            {% for service in category.services.all %}
+                <li><h3>{{ service.title }}</h3> {{ service.description }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h4>{% lorem 7 %}</h4>
+    {% endif %}
+
+{% endblock %}
+

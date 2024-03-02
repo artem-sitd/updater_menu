@@ -1,14 +1,10 @@
 <ul>
     {% for category in categories %}
-    <li>
-        <a href="#">{{ category.title }}</a>
-        {% if category.has_children %}
-        <ul>
-            {% for subcategory in category.subcategory.all %}
-            <li><a href="#">{{ subcategory.title }}</a></li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </li>
+        <li>
+            <a href="{% url 'menu:category_detail' category.slug %}">{{ category.title }}</a>
+            {% if category.has_children %}
+                {% include 'menu.html' with categories=category.subcategory.all %}
+            {% endif %}
+        </li>
     {% endfor %}
 </ul>
